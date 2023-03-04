@@ -1,0 +1,10 @@
+com\ggbz\config\ServletConfig.class
+com\ggbz\service\Impl\BookServiceImpl.class
+com\ggbz\config\SpringConfig.class
+com\ggbz\config\JdbcConfig.class
+com\ggbz\config\MyBatisConfig.class
+com\ggbz\domain\Book.class
+com\ggbz\config\SpringMvcConfig.class
+com\ggbz\controller\BookController.class
+com\ggbz\service\BookService.class
+com\ggbz\dao\BookDao.class
