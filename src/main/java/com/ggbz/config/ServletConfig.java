@@ -1,6 +1,9 @@
 package com.ggbz.config;
 
+import org.springframework.web.filter.CharacterEncodingFilter;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
+
+import javax.servlet.Filter;
 
 public class ServletConfig extends AbstractAnnotationConfigDispatcherServletInitializer {
     @Override
@@ -19,5 +22,14 @@ public class ServletConfig extends AbstractAnnotationConfigDispatcherServletInit
     protected String[] getServletMappings() {
         //拦截所有的请求，让所有的请求都走mvc
         return new String[]{"/"};
+    }
+
+    //乱码处理
+
+    @Override
+    protected Filter[] getServletFilters() {
+        CharacterEncodingFilter filter = new CharacterEncodingFilter();
+        filter.setEncoding("UTF-8");
+        return new Filter[]{filter};
     }
 }
